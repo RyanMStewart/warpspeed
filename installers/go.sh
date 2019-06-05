@@ -1,4 +1,5 @@
 #!/bin/bash
+# sudo ./provision.sh --installer --go
 
 # Make sure warpspeed environment vars are available before proceeding.
 if [ -z "$WARPSPEED_ROOT" ] || [ -z "$WARPSPEED_USER" ]; then
@@ -21,9 +22,11 @@ sudo tar -xvf go1.12.5.linux-amd64.tar.gz
 sudo mv go /usr/local
 
 export GOROOT=/usr/local/go
-
 export GOPATH=$HOME/sites
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
+echo 'export GOROOT=/usr/local/go' >> ~/.profile
 echo 'export GOPATH=$HOME/sites' >> ~/.profile
-echo 'PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.profile
+echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.profile
+
+go version
