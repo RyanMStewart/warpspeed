@@ -21,12 +21,12 @@ wget https://dl.google.com/go/go1.12.5.linux-amd64.tar.gz
 sudo tar -xvf go1.12.5.linux-amd64.tar.gz
 sudo mv go /usr/local
 
-echo 'export GOROOT=/usr/local/go' >> ~/.bash_profile
-echo 'export GOPATH=$HOME/sites' >> ~/.bash_profile
-echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bash_profile 
+echo 'export GOROOT=/usr/local/go' | bash -c #>> ~/.bash_profile
+echo 'export GOPATH=$HOME/sites' | bash -c #>> ~/.bash_profile
+echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' | bash -c #>> ~/.bash_profile 
 
 echo 'export GOROOT=/usr/local/go' >> ~/.profile
 echo 'export GOPATH=$HOME/sites' >> ~/.profile
 echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.profile
 
-echo 'source ~/.bash_profile' | bash
+#echo 'source ~/.bash_profile' | bash
