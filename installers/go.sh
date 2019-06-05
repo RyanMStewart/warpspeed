@@ -29,6 +29,4 @@ echo 'export GOROOT=/usr/local/go' >> ~/.profile
 echo 'export GOPATH=$HOME/sites' >> ~/.profile
 echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.profile
 
-source ~/.bash_profile
-
-go version
+echo 'source ~/.bash_profile' | bash
